@@ -1,0 +1,30 @@
+import random
+moznosti = ('kámen', 'nůžky', 'papír')
+
+tah_pocitace = random.choice(moznosti)
+tah_hrace = input('Jaká je tvoje volba?/ kámen, nůžky nebo papír?: ')
+print("Počítač hraje: ", tah_pocitace)
+
+if tah_hrace == 'kámen':
+	if tah_pocitace == 'kámen':
+		print('Remíza!')
+	elif tah_pocitace == 'nůžky':
+		print('Vyhrál jsi!')
+	else:
+		print('Prohrál jsi!')
+elif tah_hrace == 'nůžky':
+	if tah_pocitace == 'kámen':
+		print('Prohrál jsi!')
+	elif tah_pocitace == 'nůžky':
+ 		print('Remíza!')
+	else:
+		print('Vyhrál jsi!')
+elif tah_hrace == 'papír':
+	if tah_pocitace == 'kámen':
+		print('Vyhrál jsi!')
+	elif tah_pocitace == 'nůžky':
+		print('Prohrál jsi!')
+	else:
+		print('Remíza!')
+else:
+	print('Omlouvám se, ale v této hře použít pouze kámen, nůžky, papír, jiná slova nejsou možná!')
